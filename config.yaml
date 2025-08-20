@@ -1,0 +1,159 @@
+# Configuration file with secrets - VULNERÁVEL
+app:
+  name: "Vulnerable Test App"
+  version: "1.0.0"
+  environment: "production"
+  debug: true  # VULNERABILIDADE: Debug em produção
+
+# Database configuration with hardcoded credentials
+database:
+  host: "localhost"
+  port: 5432
+  name: "production_db"
+  username: "admin"
+  password: "super_secret_database_password_123"  # VULNERABILIDADE
+  ssl: false  # VULNERABILIDADE: SSL desabilitado
+  pool_size: 10
+  timeout: 30
+
+# API Keys and Secrets
+api_keys:
+  stripe:
+    public: "pk_test_abcdefghijklmnopqrstuvwxyz123456"
+    secret: "sk_test_1234567890abcdefghijklmnopqrstuv"  # VULNERABILIDADE
+  
+  aws:
+    access_key_id: "AKIAIOSFODNN7EXAMPLE"  # VULNERABILIDADE
+    secret_access_key: "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"  # VULNERABILIDADE
+    region: "us-east-1"
+    bucket: "my-production-bucket"
+  
+  github:
+    token: "ghp_1234567890abcdefghijklmnopqrstuvwxyz12"  # VULNERABILIDADE
+    webhook_secret: "my_github_webhook_secret_123"
+  
+  slack:
+    bot_token: "xoxb-1234567890123-1234567890123-abcdefghijklmnopqrstuvwx"  # VULNERABILIDADE
+    webhook_url: "https://hooks.slack.com/services/T123/B123/abcdefghijklmnopqrstuvwxyz"
+
+# JWT Configuration
+jwt:
+  secret: "my-super-secret-jwt-key-that-should-never-be-exposed"  # VULNERABILIDADE
+  expiration: 3600
+  refresh_secret: "my-refresh-token-secret-key-123456789"  # VULNERABILIDADE
+  algorithm: "HS256"
+
+# OAuth Configuration
+oauth:
+  google:
+    client_id: "123456789012-abcdefghijklmnopqrstuvwxyz123456.apps.googleusercontent.com"
+    client_secret: "GOCSPX-abcdefghijklmnopqrstuvwxy"  # VULNERABILIDADE
+    
+  facebook:
+    app_id: "1234567890123456"
+    app_secret: "abcdef1234567890abcdef1234567890"  # VULNERABILIDADE
+
+# Redis Configuration
+redis:
+  host: "localhost"
+  port: 6379
+  password: "redis_secret_password_123"  # VULNERABILIDADE
+  db: 0
+  timeout: 5
+
+# Email Configuration
+email:
+  smtp:
+    host: "smtp.gmail.com"
+    port: 587
+    username: "app@company.com"
+    password: "email_password_123"  # VULNERABILIDADE
+    tls: true
+  
+  sendgrid:
+    api_key: "SG.abcdefghijklmnopqrstuvwxyz.1234567890abcdefghijklmnopqrstuvwxyz"  # VULNERABILIDADE
+
+# Security Configuration (ironicamente insegura)
+security:
+  secret_key: "my-flask-secret-key-123456789"  # VULNERABILIDADE
+  password_salt: "my_password_salt_123"  # VULNERABILIDADE
+  encryption_key: "32_char_encryption_key_123456789012"  # VULNERABILIDADE
+  session_timeout: 86400
+  max_login_attempts: 3
+  lockout_duration: 300
+
+# File Storage
+storage:
+  local:
+    path: "/var/app/uploads"
+    permissions: "777"  # VULNERABILIDADE: Permissões muito abertas
+  
+  s3:
+    bucket: "my-uploads-bucket"
+    access_key: "AKIAIOSFODNN7UPLOADS"  # VULNERABILIDADE
+    secret_key: "uploads/secret/key/123456789abcdefg"  # VULNERABILIDADE
+
+# Logging Configuration
+logging:
+  level: "DEBUG"  # VULNERABILIDADE: Log level muito verboso em produção
+  file: "/var/log/app.log"
+  rotate: true
+  max_size: "100MB"
+  backup_count: 5
+  include_sensitive: true  # VULNERABILIDADE: Logs podem conter dados sensíveis
+
+# Third-party Services
+services:
+  twilio:
+    account_sid: "AC1234567890abcdef1234567890abcdef"
+    auth_token: "abc123def456ghi789jkl012mno345pqr"  # VULNERABILIDADE
+    
+  stripe:
+    webhook_secret: "whsec_1234567890abcdefghijklmnopqrstuv"  # VULNERABILIDADE
+    
+  paypal:
+    client_id: "Aabcdefghijklmnopqrstuvwxyz123456789"
+    client_secret: "Eabcdefghijklmnopqrstuvwxyz123456789"  # VULNERABILIDADE
+
+# Development Configuration
+development:
+  auto_reload: true
+  debug_toolbar: true
+  profiling: true
+  fake_emails: false
+  
+  # Credenciais de desenvolvimento (ainda perigosas)
+  admin_user: "dev_admin"
+  admin_pass: "dev_password_123"  # VULNERABILIDADE
+
+# Backup Configuration
+backup:
+  database:
+    enabled: true
+    frequency: "daily"
+    retention: 30
+    destination: "s3://backups-bucket"
+    encryption_key: "backup_encryption_key_123456789012"  # VULNERABILIDADE
+
+# Monitoring
+monitoring:
+  sentry:
+    dsn: "https://1234567890abcdef@o123456.ingest.sentry.io/123456"
+    environment: "production"
+    
+  newrelic:
+    license_key: "1234567890abcdef1234567890abcdef12345678"  # VULNERABILIDADE
+
+# Private Key inline (muito inseguro)
+certificates:
+  private_key: |
+    -----BEGIN PRIVATE KEY-----
+    MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC7VJTUt9Us8cKB
+    UO7YyL2N+D6h28+8G2Rt0NWXQVm5j3nEqFj5OQTL5lHb9QXq7H4L1q6X9I5m
+    -----END PRIVATE KEY-----
+    
+  public_key: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu1SU1LfVLPHCgVDu2Mi9
+    jfg+odvPvBtkbdDVl0FZuY95xKhY+TkEy+ZR2/UF6ux+C9aul/SOZg==
+    -----END PUBLIC KEY-----

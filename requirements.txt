@@ -1,0 +1,31 @@
+# SecureQA Suite - Dependencies
+# Otimizado para deploy em produção
+
+# Core Framework
+streamlit>=1.37.0,<1.40.0
+pandas>=2.0.0,<2.3.0
+
+# Visualization
+plotly>=5.17.0,<6.0.0
+
+# HTTP Requests & Network
+requests>=2.31.0,<3.0.0
+urllib3>=2.0.0,<3.0.0
+
+# PDF Generation
+reportlab>=4.0.0,<5.0.0
+
+# Git Operations (opcional - com fallback)
+GitPython>=3.1.40,<4.0.0
+
+# Security & Crypto
+cryptography>=41.0.0,<42.0.0
+
+# File Processing
+PyYAML>=6.0,<7.0
+python-dotenv>=1.0.0,<2.0.0
+
+# Development (opcional)
+# pytest>=7.4.0,<8.0.0
+# black>=23.0.0,<24.0.0
+# flake8>=6.0.0,<7.0.0
