@@ -1,6 +1,6 @@
 # 🔒 SecureQA Suite v2.0
 
-Uma suíte completa de testes de segurança automatizados desenvolvida para análise de repositórios GitHub e aplicações web.
+Uma suíte de testes de segurança automatizados desenvolvida para análise de repositórios GitHub e aplicações web.
 
 ![SecureQA Suite Dashboard](https://img.shields.io/badge/Status-Production%20Ready-green)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
@@ -261,4 +261,5 @@ Contribuições são bem-vindas! Por favor:
 - **🏗️ OWASP** compliance
 - **🔍 Regular** security audits
 - **📊 Penetration** testing
+
 
