@@ -216,15 +216,10 @@ pip install -r requirements.txt --force-reinstall
 - Validar requirements.txt
 - Checar logs do Streamlit Cloud
 
-## 📞 Suporte
-
-- **Email**: [seu-email]
-- **LinkedIn**: [seu-linkedin]
-- **GitHub Issues**: [link-issues]
-
 ## 📄 Licença
 
 MIT License - veja [LICENSE](LICENSE) para detalhes.
 
 ---
+
 
