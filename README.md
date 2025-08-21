@@ -262,4 +262,22 @@ Contribuições são bem-vindas! Por favor:
 - **🔍 Regular** security audits
 - **📊 Penetration** testing
 
+## 📞 **Entre em contato**
+
+[![Website](https://img.shields.io/badge/Website-4c1d95?style=for-the-badge&logo=firefox&logoColor=a855f7)](https://www.nilorocha.tech)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nilo-rocha-/)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nilo.roch4@gmail.com)
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📈 **Analytics do Projeto**
+
+![GitHub stars](https://img.shields.io/github/stars/seu-usuario/employee-attrition-analytics?style=social)
+![GitHub forks](https://img.shields.io/github/forks/seu-usuario/employee-attrition-analytics?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/seu-usuario/employee-attrition-analytics?style=social)
+
+---
+
 
