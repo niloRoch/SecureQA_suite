@@ -41,7 +41,7 @@ Uma suíte de testes de segurança automatizados desenvolvida para análise de r
 - **50+ tipos de secrets** (API keys, tokens, certificates)
 - Análise contextual para reduzir falsos positivos
 - Suporte a **AWS**, **GitHub**, **Slack**, **Stripe**
-- **Regex patterns** customizáveis
+- **Regex patterns** - customizáveis
 
 ### 🐳 **Análise de Containers**
 - **Dockerfile security scanning**
@@ -279,5 +279,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ![GitHub watchers](https://img.shields.io/github/watchers/seu-usuario/employee-attrition-analytics?style=social)
 
 ---
+
 
 
